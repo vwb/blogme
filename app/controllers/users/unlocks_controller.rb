@@ -1,4 +1,4 @@
-class users::unlocksController < Devise::unlocksController
+class Users::unlocksController < Devise::unlocksController
   # def new
   #   super
   # end
