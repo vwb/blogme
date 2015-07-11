@@ -1,0 +1,16 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-2" id="sidebar">
+			<h1> Home </h1>
+			<%= image_tag current_user.avatar.url(:medium), :class => "img-circle avatar" %>
+			<p class="center" style="text-align: center"> <%= current_user.username %> </p>
+			<%= link_to "Make a Blog", new_blog_path, :class => "btn btn-primary", :method => :get %>
+		</div>
+		<div class= "col-xs-10 col-xs-offset-2">
+			<h1 style="text-align:center"> Your Blogs </h1>
+			<% @blogs.reverse_each do |blog| %>
+			   <%= render "blogs/mini_show", :blog => blog%>
+			<%end%>
+		</div>
+	</div>
+</div>

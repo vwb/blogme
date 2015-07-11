@@ -1,0 +1,471 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+ */
+ 
+
+@font-face{
+ 	font-family:"MANIFESTO";
+ 	src:url("MANIFESTO.ttf") format('truetype');
+ }
+
+@font-face{
+ 	font-family:"NexaLight";
+  	src:url("NexaLight.otf") format('opentype');
+ }
+
+@keyframes loadanimation-side{
+	
+	from {
+		top: 400px;
+	}
+
+	to {
+		top: 70px;
+		animation-timing-function: ease-out;
+	}
+}
+
+@keyframes loadanimation-main{
+	
+	from {
+		top: 500px;
+	}
+
+	to {
+		top: 0px;
+		animation-timing-function: ease-out;
+	}
+}
+
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+
+p, div, h1, h2, h3, h4, h5, h6 {
+	font-family: "NexaLight";
+}
+
+#danger{
+	color: darkred;
+	border-color: darkred;
+}
+
+#danger:hover{
+	color: red;
+	
+}
+
+.animate-load-side{
+	animation: loadanimation-side 2.5s;
+}
+
+.animate-load-main{
+	animation: loadanimation-main 2.5s;
+}
+
+.post-nav{
+	color: black;
+	border-color: black;
+	border-style: solid;
+	border-size: 1px;
+	font-color: black;
+}
+
+
+.home-page {
+ 	background: url('desert.jpg');
+ 	background-size: cover;
+ 	background-repeat: no-repeat;
+ }
+
+ .home-basics {
+ 	background-color:rgba(255,255,255,0.55);
+ 	padding-bottom: 10vw;
+ 	padding-top: 10vw;
+ 	border-radius: 15px;
+ }
+
+ .splash-width {
+ 	width: 28vw;
+ }
+
+ .test {
+ 	width: auto;
+ }
+
+ body { 
+ 	padding-top: 70px; 
+ 	padding-left: 30px;
+ 	padding-right: 30px;
+ 	padding-bottom: 30px;
+ 	background: #ffffff;
+ }
+
+.post-body{
+	padding-top: 15px;
+}
+
+
+ .my-header {
+ 	font-family: "MANIFESTO"; 	
+ }
+
+ .post {
+ 	border-style: solid;
+ 	border-bottom-width: 1px;
+ 	border-top-width: 0px;
+ 	border-right-width: 0px;
+ 	border-left-width: 0px;
+ 	border-bottom-color: lightgrey;
+ 	padding-bottom: 20px;
+ }
+
+ .post-content{
+  	font-family: "NexaLight";
+ 	color: black;
+ }
+
+ .post-content:hover, .post-content:focus{
+ 	color: black;
+ 	text-decoration: none;
+ }
+
+ .post-header{
+ 	color: black;
+ 	-webkit-transition-property:color ; 
+	-webkit-transition-duration: 250ms; 
+	-webkit-transition-timing-function: linear;
+ }
+
+ .blog-header{
+ 	color: black;
+ 	-webkit-transition-property:color ; 
+	-webkit-transition-duration: 250ms; 
+	-webkit-transition-timing-function: linear;
+	text-decoration: underline;
+ }
+
+ .blog-header:hover{
+ 	color: darkgrey;
+ }
+
+ .post-header:hover, .post-header:focus{
+ 	text-decoration: none;
+ 	color: darkgrey;
+ }
+
+.navbar {
+	background: white;
+	border-bottom: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: lightgrey;
+}
+
+img {
+	max-width: 100%; 
+	height: auto;
+}
+
+.results {
+	border-style: solid;
+	border-width: 1px;
+	border-color: lightgrey;
+	border-bottom: 0px;
+	border-top: 0px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.form-group{
+	width: 100%;
+}
+
+.login-form {
+	width: 50%;
+}
+
+.form-input {
+	border: 1px;
+	border-radius: 15px;
+}
+
+
+.form-control {
+	border-size: 1px;
+	border-color: #ededed;
+}
+
+.center {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.post-header {
+	overflow: hidden;
+}
+
+.btn-primary {
+	padding: 8px 18px;
+	background-color: white;
+	border-radius: 24px;
+	border-color: black;
+	color: black;
+
+	-webkit-transition-property:color, border-color; 
+	-webkit-transition-duration: 250ms, 250ms; 
+	-webkit-transition-timing-function: linear, linear; 
+}
+
+.btn-primary:hover{
+	
+	color: grey;
+	border-color: grey;
+
+	background-color: white;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.btn-default {
+	border-size: 0px;
+	border-style: solid;
+	border-color: white;
+	font-size: 20px;
+	padding-left: 0px;
+
+
+	-webkit-transition-property:color ; 
+	-webkit-transition-duration: 250ms; 
+	-webkit-transition-timing-function: linear;
+
+}
+
+.btn-default:hover{
+	border-color: white;
+	background-color: white;
+	color: grey;
+
+}
+
+.avatar{
+	margin-bottom: 10px;
+}
+
+.comment {
+	padding-top: 10px;
+}
+
+.comment2 {
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-left-color: lightgrey;
+	padding-left: 15px;
+}
+
+.comment-body{
+	margin-top: 8px;
+}
+
+.comment-header {
+	color: lightgrey;
+}
+
+.comment-form {
+	margin-top: 15px;
+}
+
+.edit-profile {
+	border-left-style:solid;
+	border-left-width:1px;
+	border-left-color: lightgrey;
+	margin-left: 30px;
+}
+
+.blog-result-body{
+	margin-bottom: 10px;
+	color: grey;
+}
+
+.search-link{
+	color: black;
+	font-size: 20px;
+	-webkit-transition-property:color, text-decoration ; 
+	-webkit-transition-duration: 250ms, 250ms; 
+	-webkit-transition-timing-function: linear, linear;
+}
+
+.search-link:hover{
+	color: grey;
+	text-decoration: none;
+}
+
+.post-result-body{
+	max-height: 100px;
+	overflow:hidden;
+	color: grey;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #ededed;
+	margin-bottom: 10px;
+	-webkit-transition: max-height 1s; /* Safari */
+    transition: max-height 1s;
+
+	.fadeout {
+		position:absolute;
+	    z-index:200;
+	    right:0; bottom:0; left:0;
+	    height:25px; /* adjust it to your needs */
+	    background: url(data:image/svg+xml;base64,alotofcodehere);
+	    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%);
+	    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(80%,rgba(255,255,255,1)));
+	    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+	    background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+	    background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+	    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+	}
+}
+
+.post-result-body:hover{
+	max-height:200px;
+}
+
+IDS
+
+#newblog-header {
+	padding-bottom: 20px;
+	padding-left: 100px;
+}
+
+#post-date {
+	text-align: right;
+}
+
+#mypost-header {
+	text-align: left;
+}
+
+#sneak-post {
+	max-height: 150px;
+	postition: absolute;
+	text-align: left;
+	font-size: 10pt;
+	color: grey;
+	width: auto;
+	overflow: hidden;
+	-webkit-transition: max-height 1s; /* Safari */
+    transition: max-height 1s;
+
+    .fadeout {
+		position:absolute;
+	    z-index:200;
+	    right:0; bottom:0; left:0;
+	    height:50px; /* adjust it to your needs */
+	    background: url(data:image/svg+xml;base64,alotofcodehere);
+	    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%);
+	    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(80%,rgba(255,255,255,1)));
+	    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+	    background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+	    background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+	    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+	}
+}
+
+#sneak-post:hover{
+	max-height: 500px;
+}
+
+#sidebar{
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-color: lightgrey;
+	text-align: center;
+	position: fixed;
+}
+
+#comment-head {
+	font-color: grey;
+}
+
+#post-delete {
+	color: darkred;
+	border-style: solid;
+	border-width: 0px;
+	background-color: white;
+	font-size: 16px;
+
+	-webkit-transition-property:color, font-size ; 
+	-webkit-transition-duration: 250ms, 250ms; 
+	-webkit-transition-timing-function: linear, linear;
+}
+
+#post-delete:hover {
+	color: red;
+}
+
+#comment-count{
+	font-size: 18px;
+}
+
+#mypost-header {
+	font-size: 17vmin;
+	margin-bottom: -20px;
+	padding-bottom: 0px;
+	border-width: 0px;
+	border-bottom-width: 1px;
+	border-bottom-color: lightgrey;
+}
+
+#post-back{
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+#log-in-links{
+	padding-right: 27px;
+}
+
+#log-in-header{
+	padding-right: 27px;
+}
+
+#splash-button{
+	background-color: transparent;
+
+	-webkit-transition-property:color, border-color, background-color ; 
+	-webkit-transition-duration: 250ms, 250ms, 250ms; 
+	-webkit-transition-timing-function: linear, linear, linear;
+}
+
+#splash-button:hover{
+	color: white;
+	border-color: white;
+}
+
+#post-back{
+	padding-left: 15px;
+}
+
+#post-nav{
+	font-size: 60px;
+}
+
+#results-header{
+	padding-bottom: 15px;
+}
+

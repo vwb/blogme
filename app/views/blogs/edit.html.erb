@@ -1,0 +1,33 @@
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-2" id="sidebar">
+      <h2> Edit Blog </h2>
+      <%= link_to blog_path(@blog.id), :class => "btn btn-default", :id => "post-back" do %>
+        <span class="glyphicon glyphicon-chevron-left"></span> Back     
+      <% end %>
+    </div>
+    <div class="col-xs-7 col-xs-offset-3">
+      <%= simple_form_for @blog, html: {class: "form-horizontal"} do |f| %>
+        <div class="form-group">
+          <%= f.label :title, class: 'control-label' %>
+            <%= f.text_field :title, class: 'form-control'%>
+          </div>
+        <div class="form-group">
+          <%= f.label :description, class: 'control-label'%>
+            <%= f.text_area :description, class: 'form-control' %>
+          </div>
+        <div class="form-group">
+          <%= f.label :location, class: 'control-label'%>
+            <%= f.text_field :location, class: 'form-control'%>
+          </div>
+        <div class="form-group">
+            <%= f.submit "Confirm", :class => "btn btn-primary" %>
+          </div>
+        <% end %>
+        </div>
+    </div>
+    </div>
+</div>

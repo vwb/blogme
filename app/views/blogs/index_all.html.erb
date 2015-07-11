@@ -1,0 +1,14 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-6 col-xs-offset-4">
+		<h2> All Current Blogs </h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-9 center">
+			<% @blogs.each do |blog| %>
+				<%= render "blogs/show_all", :blog => blog %>
+			<%end%>
+		</div>
+	</div>
+</div>

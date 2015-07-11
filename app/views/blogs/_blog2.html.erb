@@ -1,0 +1,16 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12">
+			<div>
+				<span style="float:left"> <h4> <%= link_to blog.title, {controller: "blogs", action: "show", id: blog.id}, :class => "search-link" %> <small> <%= blog.location %> </small> </h4> </span>
+				<span style="float:right"> <h5> <small> created by </small> <%= User.find(blog.user_id).username %> <small> on <%= Date.parse(blog.created_at).strftime("%b %d") %> </small> </h5> </span>
+			</div>
+			<div class="col-xs-12 blog-result-body">
+				<% if blog.description %>
+				<%= blog.description.html_safe %>
+				<% end %>
+				<div class="fadeout"></div>
+			</div>
+		</div>
+	</div>
+</div>

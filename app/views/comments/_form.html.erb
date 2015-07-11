@@ -1,0 +1,18 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-10 comment-form">
+			<%= form_for([@post, @post.comments.build]) do |f| %>
+				
+				<p>
+				<%= f.text_area :content, class: 'form-control', :id => 'sometext', :placeholder => "Add a comment..." %>
+				</p>
+				<p>
+				<%= f.submit "Post Comment", :class => "btn btn-primary" %>
+				</p>
+
+			<%end%>
+		</div>
+	</div>
+</div>
+
+

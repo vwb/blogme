@@ -1,0 +1,34 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-10 col-xs-offset-1">
+			<div class="center">
+				<h1 class="my-header" stlye="text-align: center" id="results-header"> Results for <%= @params %> </h1>
+			</div>
+			<div class="results">
+			<% if @posts.empty? and @blogs.empty? %>
+			<div class="center">
+				<br>
+				<p stlye="text-align:center"> There doesn't seem to be anything here... </p>
+			</div>
+			<% end %>
+			<% if !@posts.empty? %>
+				<h2> Posts with "<%= @params %>" </h2>
+					<% @posts.each do |post|%>
+						<div>
+							<%= render "posts/post2", :post => post %>
+						</div>
+					<% end %>
+			<% end %>
+			<% if !@blogs.empty? %>
+			<h2> Blogs with "<%= @params%>"</h2>
+					<% @blogs.each do |blog| %>
+						<div>
+							<%= render "blogs/blog2", :blog => blog %>
+						</div>
+					<% end %>
+			<% end %>
+			</div>
+		</div>
+	</div>
+</div>
+

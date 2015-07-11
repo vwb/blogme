@@ -1,0 +1,23 @@
+<div class="container-fluid post">
+	<div class="row">
+		<div class="col-xs-12" id="show-post">
+			<h3 class="my-header"> <%= link_to post.title, post_path(post), class: "post-header" %> <small> <%= post.location %> </small> <span style="float: right"><small><%=post.created_at.strftime("%d %b %Y") %></small></span></h3>
+			<p> <%= link_to post.content.html_safe, post_path(post), class: "post-content"%> </p>
+		</div>
+		<div class="container-fluid" >
+			<% if post.blog.user == current_user %>
+			
+				<span style="float:right"> 
+					<%= link_to post_path(post), method: :delete, remote: true, class: "btn btn-danger btn-sm", id: "post-delete", data:{confirm: "Are you sure you want to delete this post?"} do %>
+  						<span class="glyphicon glyphicon-trash"></span>
+					<% end %>
+
+					<%= link_to edit_post_path(post), method: :get do %>
+						<span class="glyphicon glyphicon-pencil"></span>
+					<% end %>
+				</span>
+			<% end %>
+				<div id="comment-count"><span style="float:left"> <%= post.comments.count %> comments </span></div>
+		</div>
+	</div>
+</div>
