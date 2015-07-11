@@ -56,4 +56,5 @@ group :production do
 end
 
 gem 'paperclip'
+gem 'puma'
 
