@@ -16,12 +16,12 @@
 
 @font-face{
  	font-family:"MANIFESTO";
- 	src:url("MANIFESTO.ttf") format('truetype');
+ 	src: font-url("MANIFESTO.ttf") format('truetype');
  }
 
 @font-face{
  	font-family:"NexaLight";
-  	src:url("NexaLight.otf") format('opentype');
+  	src: font-url("NexaLight.otf") format('opentype');
  }
 
 @keyframes loadanimation-side{
@@ -85,7 +85,7 @@ p, div, h1, h2, h3, h4, h5, h6 {
 
 
 .home-page {
- 	background: url('desert.jpg');
+ 	background: image-url('desert.jpg');
  	background-size: cover;
  	background-repeat: no-repeat;
  }
