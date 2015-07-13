@@ -396,6 +396,8 @@ IDS
 	border-color: lightgrey;
 	text-align: center;
 	position: fixed;
+	padding-left: 0px;
+	word-wrap: break-word;
 }
 
 #comment-head {
@@ -469,3 +471,6 @@ IDS
 	padding-bottom: 15px;
 }
 
+#name-entry{
+	width: 33%;
+}

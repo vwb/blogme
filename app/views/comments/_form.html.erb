@@ -1,6 +1,7 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-xs-10 comment-form">
+		<% if user_signed_in? %>
 			<%= form_for([@post, @post.comments.build]) do |f| %>
 				
 				<p>
@@ -11,6 +12,23 @@
 				</p>
 
 			<%end%>
+
+		<% else %> 
+
+			<%= form_for([@post, @post.comments.build]) do |f| %>
+
+				<p> 
+				<%= f.text_field :name, class: "form-control", required: true, :id => 'name-entry', :placeholder => "Your Name" %>
+				</p>
+				<p>
+				<%= f.text_area :content, class: 'form-control', :id => 'sometext', :placeholder => "Add a comment..." %>
+				</p>
+				<p>
+				<%= f.submit "Post Comment", :class => "btn btn-primary" %>
+				</p>
+
+			<% end %>
+		<% end %>
 		</div>
 	</div>
 </div>

@@ -17,7 +17,7 @@
 					<% end %>
 				</span>
 			<% end %>
-				<div id="comment-count"><span style="float:left"> <%= post.comments.count %> comments </span></div>
+				<div id="comment-count"><span style="float:left"> <%= link_to post_path(post), class: "search-link" do%> <span> <%=post.comments.count %> comments </span> <%end%> </span></div>
 		</div>
 	</div>
 </div>

@@ -3,10 +3,13 @@
 		<div class="col-xs-10 comment">
 			<div class="comment2">
 				<div class="comment-header">
-					<span style="float: left" > <%= comment.user.username %> </span>
+					<% if comment.user %>
+						<span style="float: left" > <%= comment.user.username %> </span>
+					<% else %>
+						<span style="float: left" > <%= comment.name %> </span>
+					<%end%>
 					<span style="float: right">
 					<%= time_ago_in_words(comment.created_at) %>
-					<%#= comment.created_at.strftime("%d %b %Y") %>
 					<% if user_signed_in?%>
 						<% if current_user.username == comment.user.username %> 
 							<%= link_to post_comment_path(post, comment.id), method: :delete, class: "btn btn-danger btn-sm", id: "post-delete", data:{confirm: "Are you sure you want to delete this comment?"} do %>
@@ -14,6 +17,7 @@
 							<% end %> 
 						<% end %>
 					<% end %>
+
 					</span>
 				</div>
 				<div class="comment-body">
