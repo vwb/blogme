@@ -59,4 +59,6 @@ gem 'rails_12factor'
 gem 'paperclip'
 gem 'puma'
 gem 'rename'
+gem 'will_paginate'
+
 

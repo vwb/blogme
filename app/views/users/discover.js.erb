@@ -1,0 +1,9 @@
+$('#my-posts').append('<% j @discover_posts.each do |post| %>
+						<%= j render "posts/post3", :post => post %>
+					   <% j end %>');
+<% if @posts.next_page %>
+  $('.pagination').replaceWith('<%= j will_paginate @posts %>');
+<% else %>
+  $(window).off('scroll');
+  $('.pagination').remove();
+<% end %>

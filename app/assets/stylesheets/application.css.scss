@@ -345,6 +345,11 @@ img {
 	max-height:200px;
 }
 
+.img-discover{
+	height: 45px
+	
+}
+
 IDS
 
 #newblog-header {
@@ -398,6 +403,21 @@ IDS
 	position: fixed;
 	padding-left: 0px;
 	word-wrap: break-word;
+}
+
+#in-post-sidebar{
+	text-align: center;
+	word-wrap: break-word;
+	padding-top: 20px;
+	padding-left: 15px;
+
+}
+
+.background-test{
+	background: -webkit-linear-gradient(left, #e9e9e9 , white); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(right, #e9e9e9, white); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(right, #e9e9e9, white); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(to right, #e9e9e9 , white); /* Standard syntax */
 }
 
 #comment-head {
@@ -473,4 +493,18 @@ IDS
 
 #name-entry{
 	width: 33%;
+}
+
+#discover-post-header{
+	font-size: 40px;
+}
+
+#discover-header{
+	font-size: 65px;
+	font-family: "MANIFESTO";
+}
+
+#fix-this{
+	padding-top: 21px;
+	padding-right: 5px;
 }

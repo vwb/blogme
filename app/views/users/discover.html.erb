@@ -1,0 +1,16 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class= "col-xs-10 col-xs-offset-1">
+			<h1 style="text-align:center" id="discover-header"> Discover </h1>
+			<p class="subtext center"> View other posts and see what the world is up to </p>
+			<div id="discover-post">
+				<% @discover_posts.each do |post| %>
+					<%= render "posts/post3", :post => post %>
+				<% end %>
+			</div>
+			<div id = "infinite-scrolling">
+				<%= will_paginate @discover_posts%>
+			</div>
+		</div>
+	</div>
+</div>

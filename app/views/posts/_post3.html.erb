@@ -1,0 +1,19 @@
+<div class="container-fluid">
+	<div class="row">
+			<div class ="col-xs-2" id="in-post-sidebar">
+			<% user = User.find(post.user_id) %>
+				<h4> <%= user.username %> </h4>
+				<%= image_tag user.avatar.url(:thumb), :class => "img-circle avatar img-discover center" %>
+			</div>
+			<div class="col-xs-10">
+				<div>
+					<span> <h4 class="my-header" style="float:left"> <%= link_to post.title, {controller: "posts", action: "show", id: post.id}, :id => "discover-post-header", :class => "search-link" %> <small> <%= post.location %> </small> </h4>
+					 <h5 style="float:right" id="fix-this"> <small> posted on <%= post.created_at.strftime("%b %d") %> </small> </h5> </span>
+				</div>
+				<div class="col-xs-12 post-result-body">
+					<%= post.content.html_safe %>
+					<div class="fadeout"></div>
+				</div>
+			</div>
+	</div>
+</div>

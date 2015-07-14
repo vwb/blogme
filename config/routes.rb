@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
     get 'blogs/index_all', to: 'blogs#index_all'
 
+    get 'users/discover', to: 'users#discover'
+
     resources :blogs
 
     resources :posts do
