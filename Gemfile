@@ -60,5 +60,6 @@ gem 'paperclip'
 gem 'puma'
 gem 'rename'
 gem 'will_paginate'
+gem 'aws-sdk', '< 2.0'
 
 
