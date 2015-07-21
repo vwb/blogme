@@ -2,7 +2,11 @@
 	<div class="row">
 		<div class="col-xs-12" id="show-post">
 			<h3 class="my-header"> <%= link_to post.title, post_path(post), class: "post-header" %> <small> <%= post.location %> </small> <span style="float: right"><small><%=post.created_at.strftime("%d %b %Y") %></small></span></h3>
+			<div class="post-content-limiter">
 			<p> <%= link_to post.content.html_safe, post_path(post), class: "post-content"%> </p>
+			<div class="fadeout"></div>
+			</div>
+
 		</div>
 		<div class="container-fluid" >
 			<% if post.blog.user == current_user %>
