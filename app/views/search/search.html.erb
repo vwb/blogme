@@ -4,7 +4,6 @@
 			<div class="center">
 				<h1 class="my-header" stlye="text-align: center" id="results-header"> Results for <%= @params %> </h1>
 			</div>
-			<div class="results">
 			<% if @posts.empty? and @blogs.empty? %>
 			<div class="center">
 				<br>
@@ -12,15 +11,19 @@
 			</div>
 			<% end %>
 			<% if !@posts.empty? %>
-				<h2> Posts with "<%= @params %>" </h2>
+			<h3 class="center"> Posts <small>with "<%= @params %>"</small> </h3>
+			<div class="result-container">
 					<% @posts.each do |post|%>
 						<div>
 							<%= render "posts/post2", :post => post %>
 						</div>
 					<% end %>
 			<% end %>
+			</div>
+			<br>
+			<h3 class= "center"> Blogs <small> with "<%= @params%>" </small></h3>
+			<div class="result-container">
 			<% if !@blogs.empty? %>
-			<h2> Blogs with "<%= @params%>"</h2>
 					<% @blogs.each do |blog| %>
 						<div>
 							<%= render "blogs/blog2", :blog => blog %>

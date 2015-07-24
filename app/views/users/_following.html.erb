@@ -1,0 +1,11 @@
+<div class="container-fluid">
+	<div class = "row" >
+		<div class = "col-md-12">
+			<%= link_to image_tag(blog.user.avatar.url(:thumb), :class => "img-circle img-discover"), user_path(blog.user.id) %>
+		</div>
+		<div class = "col-md-12">
+			<h5> <%= link_to blog.title, blog_path(blog.id), class: "post-header my-header" %> </h5>
+			<p> <%= blog.description %> </p>
+		</div>
+	</div>
+</div>

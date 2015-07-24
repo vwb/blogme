@@ -1,0 +1,37 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-2" id="sidebar">
+			<h1> Home </h1>
+			<%= link_to (image_tag current_user.avatar.url(:medium), :class => "img-circle avatar"), user_path(current_user) %>
+			<p><%= current_user.username %> </p>
+			<%= link_to "Make a Blog", new_blog_path, :class => "btn btn-primary", :method => :get %>
+
+			<br>
+			<br>
+			 <h4 class="center" style="text-align: center"> Following </h4> 
+			<div class="sidebar-followers">
+				<% @following.each do |blog| %>
+					<%= render "users/following", :blog => blog  %>
+				<% end %>
+			</div>
+		</div>
+		<div class = "row" >
+			<div class = "col-xs-10 col-xs-offset-2">
+				<div class = "my-header center">
+					<h1 class="my-header"> Recent Activity </h1>
+				</div>
+				<div class= "blog-stream">
+					<% @feed_items.each do |post| %>
+						<%= render "posts/feed_posts", :post => post %>
+					<% end %>
+					<div style="padding-left:15px"> <%= will_paginate @feed_items %> </div>
+				</div>
+			</div>
+			<div class = "top-right-link">
+				<%= link_to blogs_path(current_user), :class => "btn btn-default transparent" do %>
+					Your Blogs <span class="glyphicon glyphicon-chevron-right"></span>			
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>

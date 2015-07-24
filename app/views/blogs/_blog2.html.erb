@@ -1,15 +1,26 @@
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-xs-12">
-			<div>
-				<span style="float:left"> <h4> <%= link_to blog.title, {controller: "blogs", action: "show", id: blog.id}, :class => "search-link" %> <small> <%= blog.location %> </small> </h4> </span>
-				<span style="float:right"> <h5> <small> created by </small> <%= User.find(blog.user_id).username %> <small> on <%= Date.parse(blog.created_at).strftime("%b %d") %> </small> </h5> </span>
+		<div class = "col-xs-12 ">
+			<div class ="col-xs-2" id="in-post-sidebar">
+			<% user = User.find(blog.user_id) %>
+
+			<% if user_signed_in? and user == current_user %>
+				<h4> <%= link_to user.username, root_path, class: "header-link" %> </h4>
+				<%= link_to image_tag(user.avatar.url(:thumb), :class => "img-circle avatar img-discover center"), root_path %>
+			<% else %>
+				<h4> <%= link_to user.username, user_path(user), class: "header-link" %> </h4>
+				<%= link_to image_tag(user.avatar.url(:thumb), :class => "img-circle avatar img-discover center"), user_path(user) %>
+			<% end %>
+
 			</div>
-			<div class="col-xs-12 blog-result-body">
-				<% if blog.description %>
-				<%= blog.description.html_safe %>
-				<% end %>
-				<div class="fadeout"></div>
+			<div class="col-xs-10 blog-result-body border-bottom">
+				<div>
+					<span> <h4 class="my-header" style="float:left"> <%= link_to blog.title, {controller: "blogs", action: "show", id: blog.id}, :class => "search-link" %> <small> <%= blog.location %> </small> </h4>
+					 <h5 style="float:right" id="fix-this"> <small> created <%= Date.parse(blog.created_at).strftime("%b %d") %> </small> </h5> </span>
+				</div>
+				<div class="col-xs-12 ">
+					<%= blog.description.html_safe %>
+				</div>
 			</div>
 		</div>
 	</div>

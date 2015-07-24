@@ -36,6 +36,8 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+## Added Gems ##
+
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
@@ -44,22 +46,32 @@ gem 'simple_form'
 # Use SCSS for stylesheets
 gem 'sass-rails'
 
+#add pagination 
+gem 'will_paginate'
+
+#user authentication
 gem 'devise'
+
+#wysiwyg editor for post creation
 gem 'ckeditor'
+
+#use for storing CKeditor uploaded image files
 gem 'dragonfly'
+
+#search function
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
-gem 'dragonfly-s3_data_store'
 
-group :production do
-	gem 'rack-cache', :require => 'rack/cache'
-end
-
+#heroku optimization
 gem 'rails_12factor'
+
+#avatar and image storage
 gem 'paperclip'
+
+#chosen web server for running with foreman/production
 gem 'puma'
-gem 'rename'
-gem 'will_paginate'
+
+#store images and avatars
 gem 'aws-sdk', '< 2.0'
 
 

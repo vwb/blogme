@@ -2,8 +2,13 @@
 	<div class="row">
 			<div class ="col-xs-2" id="in-post-sidebar">
 			<% user = User.find(post.user_id) %>
-				<h4> <%= user.username %> </h4>
-				<%= image_tag user.avatar.url(:thumb), :class => "img-circle avatar img-discover center" %>
+			<% if user == current_user %>
+				<h4> <%= link_to user.username, root_path, class: "header-link" %> </h4>
+				<%= link_to image_tag(user.avatar.url(:thumb), :class => "img-circle avatar img-discover center"), root_path %>
+			<% else %>
+				<h4> <%= link_to user.username, user_path(user), class: "header-link" %> </h4>
+				<%= link_to image_tag(user.avatar.url(:thumb), :class => "img-circle avatar img-discover center"), user_path(user) %>
+			<% end %>
 			</div>
 			<div class="col-xs-10">
 				<div>

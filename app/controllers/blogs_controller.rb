@@ -56,6 +56,7 @@ class BlogsController < ApplicationController
 
 	def index
 	  @blogs = User.find(current_user).blogs
+	  @following = current_user.following.order('created_at DESC')
 	end
 
 	def index_all

@@ -1,0 +1,12 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12 blog-border">
+			<h4 class="my-header"> <%= link_to blog.title, blog_path(blog), class: "header-link" %> <small> <%= blog.location %> </small> <span style="float:right"> <h5> <small> created <%= blog.created_at.strftime("%b %d") %></small></h5></span> </h4>
+			<% if blog.posts.last != nil %>
+				<div class= "grey-font">
+					<p> <span style="float:left"> <%= blog.followers.count %> followers </span><p>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>

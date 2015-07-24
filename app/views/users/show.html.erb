@@ -1,0 +1,46 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-2" id="sidebar">
+			<h1> <%= @user.username %> </h1>
+			<% if user_signed_in? %>
+				<% if @user == current_user %>
+					<%= link_to (image_tag @user.avatar.url(:medium), :class => "img-circle avatar"), root_path %>
+				<% else %>
+					<%= link_to (image_tag @user.avatar.url(:medium), :class => "img-circle avatar"), user_path(@user) %>
+				<% end %>
+			<% end %>
+			 <h4 class="center" style="text-align: center"> Following </h4> 
+			<div class="sidebar-followers">
+				<% @following.each do |blog| %>
+					<%= render "users/following", :blog => blog  %>
+				<% end %>
+			</div>
+
+		</div>
+		<div class = "col-xs-10 col-xs-offset-2">
+			<div class = "row">
+				<div class= "col-md-8">
+					<div class = "my-header center">
+					<h3 class="center"> <small> <%=@user.username%>'s &nbsp; </small> Recent Posts </h3>
+					</div>
+					<div class="activity-stream">
+						<% @activity.each do |post| %>
+							<%= render "posts/post_activity", :post => post %>
+						<% end %>
+					</div>
+				</div>
+				<div class= "col-md-4">
+					<div class = "my-header center">
+						<h3> Blogs </h3>
+					</div>
+					<div class= "blog-stream left-border">
+					<% @blogs.reverse_each do |blog| %>
+						<%= render "blogs/user_show", :blog => blog %>
+					<% end %>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

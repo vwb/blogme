@@ -11,9 +11,9 @@
 			<% end %>
 			</div>
 			<div class="col-xs-10">
-				<div>
-					<span> <h4 class="my-header" style="float:left"> <%= link_to post.title, {controller: "posts", action: "show", id: post.id}, :id => "discover-post-header", :class => "search-link" %> <small> <%= post.location %> </small> </h4>
-					 <h5 style="float:right" id="fix-this"> <small> posted on <%= Date.parse(post.created_at).strftime("%b %d") %> </small> </h5> </span>
+				<div class = "recent-activity-size">
+					<span> <h4 class="my-header" style="float:left"> <%= link_to post.title, {controller: "posts", action: "show", id: post.id}, :class => "header-link" %> <small> <%= post.location %> </small> </h4>
+					 <h5 style="float:right" id="fix-this"> <small> posted <%= time_ago_in_words(post.created_at) %> ago </small> </h5> </span>
 				</div>
 				<div class="col-xs-12 post-result-body">
 					<%= post.content.html_safe %>

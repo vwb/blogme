@@ -1,7 +1,7 @@
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-12" id="sneak-blog-show">
-			<h3 class="my-header"> <%= link_to blog.title, blog_path(blog), :class => "blog-header" %> <small> <%= blog.location %> </small> </h3>
+		<div class="col-md-12 blog-border" id="sneak-blog-show">
+			<h3 class="my-header"> <%= link_to blog.title, blog_path(blog), class: "header-link" %> <small> <%= blog.location %> </small> </h3>
 			<% if blog.posts.last != nil %>
 			<div class="container-fluid" id="sneak-post">
 					<div>

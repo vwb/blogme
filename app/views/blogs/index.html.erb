@@ -2,15 +2,27 @@
 	<div class="row">
 		<div class="col-xs-2" id="sidebar">
 			<h1> Home </h1>
-			<%= image_tag current_user.avatar.url(:medium), :class => "img-circle avatar" %>
+			<%= link_to image_tag(current_user.avatar.url(:medium), :class => "img-circle avatar"), root_path, class: "header-link" %>
 			<p class="center" style="text-align: center"> <%= current_user.username %> </p>
 			<%= link_to "Make a Blog", new_blog_path, :class => "btn btn-primary", :method => :get %>
+			<br><br>
+			 <h4 class="center" style="text-align: center"> Following </h4> 
+			<div class="sidebar-followers">
+				<% @following.each do |blog| %>
+					<%= render "users/following", :blog => blog  %>
+				<% end %>
+			</div>
 		</div>
 		<div class= "col-xs-10 col-xs-offset-2">
-			<h1 style="text-align:center"> Your Blogs </h1>
+			<h1 class="my-header center" > Your Blogs </h1>
 			<% @blogs.reverse_each do |blog| %>
-			   <%= render "blogs/mini_show", :blog => blog%>
+			   <%= render "blogs/mini_show", :blog => blog %>
 			<%end%>
 		</div>
-	</div>
+		<div class = "top-right-link">
+		<%= link_to root_path, :class => "btn btn-default transparent" do %>
+			<span class="glyphicon glyphicon-chevron-left"></span> Home 	
+		<% end %>
+		</div>
+</div>
 </div>

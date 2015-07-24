@@ -6,14 +6,34 @@
 			<p class="description"><%= @blog.description.html_safe %></p>
 			<% end %>
 			<div class="center">
-				<%= image_tag @blog.user.avatar.url(:medium), :class => "img-circle avatar" %>
-				<p class="center" style="text-align: center"> <%= @blog.user.username %> </p>
+				<% if @blog.user == current_user %>
+					<%= link_to image_tag(@blog.user.avatar.url(:medium), :class => "img-circle avatar"), root_path %>
+					<p class="center" style="text-align: center"> <%= @blog.user.username %> </p>
+				<% else %>
+					<%= link_to image_tag(@blog.user.avatar.url(:medium), :class => "img-circle avatar"), user_path(@blog.user) %>
+					<p class="center" style="text-align: center"> <%= @blog.user.username %> </p>
+				<% end %>
 			</div>
 			<% if current_user == @blog.user %>
 				<%= link_to "New Post", new_post_path(:blogID => @blog), :class => "btn btn-primary", :method => :get %>
 				<%= link_to "Edit Blog", edit_blog_path(@blog), :class => "btn btn-primary", :method => :get %>
 				<%= link_to "Delete Blog", blog_path(@blog), :class => "btn btn-primary", :id => "danger", method: :delete, data:{confirm: "Are you sure you want to delete this blog?"}%>
+			<% else %>
+				<% if user_signed_in? %>
+					<% if current_user.following?(@blog) %>
+						<%= render "blogs/unfollow" %>
+					<% else %>
+						<%= render "blogs/follow_form"  %>
+					<% end %>
+				<% else %>
+					<%= link_to "Follow", new_user_session_path, class: "btn btn-primary call-to-action-btn" %>
+					<br>
+				<% end %>
 			<% end %>
+			<br>
+			<br>
+			<p> <%= @blog.followers.count %> followers </p>
+
 		</div>
 		<div class="col-xs-10 col-xs-offset-2">
 		  <% if @blog.posts.last != nil %>

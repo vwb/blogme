@@ -1,0 +1,28 @@
+<div class="container-fluid post blog-border">
+	<div class="row">
+		<div class="col-xs-12" id="activity-show-post">
+			<h4 class="my-header"> <%= link_to post.title, post_path(post), class: "post-header" %> <small> <%= post.location %> </small> <span style="float: right"><small><p>posted <%= time_ago_in_words(post.created_at) %> ago</p></small></span></h4>
+			<div class="activity-limit">
+			<p> <%= link_to post.content.html_safe, post_path(post), class: "post-content limit just-grey-font"%> </p>
+			<div class="fadeout"></div>
+			</div>
+		</div>
+		<div class="container-fluid" >
+			<% if post.blog.user == current_user %>
+
+			
+				<span style="float:right"> 
+					<%= link_to post_path(post), method: :delete, remote: true, class: "btn btn-danger btn-sm", id: "post-delete", data:{confirm: "Are you sure you want to delete this post?"} do %>
+  						<span class="glyphicon glyphicon-trash activity-size"></span>
+					<% end %>
+
+					<%= link_to edit_post_path(post), method: :get do %>
+						<span class="glyphicon glyphicon-pencil activity-size"></span>
+					<% end %>
+				</span>
+			<% end %>
+				<div id="comment-count"><span style="float:left"> <%= link_to post_path(post), class: "search-link activity-size" do%> <span> <%=post.comments.count %> comments </span> <%end%> </span>  </div>
+
+		</div>
+	</div>
+</div>
