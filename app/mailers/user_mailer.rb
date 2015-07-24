@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "blog@blogme.com"
+  default from: "BlogBot@blogme.com"
 
   def follow_notification(blog_owner, follower, followed_blog)
   	@user = blog_owner
