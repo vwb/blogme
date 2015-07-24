@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+
+  <body>
+  	<div class="container-fluid">
+  		<div class="row">
+  			<div class="my-header center">
+  				<h2> Congratulations <%= @user.username %> you have a new follower! </h2>
+  			</div>
+  			<div class = "email-body col-xs-8 col-xs-offset-2">
+  				<div class = "row center">
+  					<div class = "col-sm-6">
+  					<h4> &nbsp; &nbsp; &nbsp; <%= @follower.username.capitalize %> is now following your blog: <%= link_to @blog.title, blog_url(@blog) %> </h4>
+            <p> Go celebrate! </p>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </body>
