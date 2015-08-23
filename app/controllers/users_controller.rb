@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 	end
 
 	def discover
-		@discover_posts = Post.paginate(page: params[:page], per_page: 8).order('created_at DESC')
+		@discover_posts = Post.paginate(page: params[:page], per_page: 6).order('created_at DESC')
 		respond_to do |format|
 			format.html
 			format.js
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 	def home
 		@user = current_user
 		@following = @user.following.order('created_at DESC')		
-		@feed_items = current_user.feed.paginate(page: params[:page], per_page: 8)
+		@feed_items = current_user.feed.paginate(page: params[:page], per_page: 5)
 	end
 
 

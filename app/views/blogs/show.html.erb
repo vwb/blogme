@@ -21,9 +21,9 @@
 			<% else %>
 				<% if user_signed_in? %>
 					<% if current_user.following?(@blog) %>
-						<%= render "blogs/unfollow" %>
+						<div id="follow_form"><%= render "blogs/unfollow" %></div>
 					<% else %>
-						<%= render "blogs/follow_form"  %>
+						<div id="follow_form"><%= render "blogs/follow_form"  %></div>
 					<% end %>
 				<% else %>
 					<%= link_to "Follow", new_user_session_path, class: "btn btn-primary call-to-action-btn" %>
@@ -32,7 +32,7 @@
 			<% end %>
 			<br>
 			<br>
-			<p> <%= @blog.followers.count %> followers </p>
+			<p id="followers"> <%= @blog.followers.count %> followers </p>
 
 		</div>
 		<div class="col-xs-10 col-xs-offset-2">

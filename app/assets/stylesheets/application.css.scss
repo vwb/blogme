@@ -1,3 +1,7 @@
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -12,573 +16,587 @@
  *
 
  */
- 
 
-@font-face{
- 	font-family:"MANIFESTO";
- 	src: font-url("MANIFESTO.ttf") format('truetype');
- }
+@font-face {
+	font-family : "MANIFESTO";
+	src         : font-url("MANIFESTO.ttf") format('truetype');
+}
 
-@font-face{
- 	font-family:"NexaLight";
-  	src: font-url("NexaLight.otf") format('opentype');
- }
+@font-face {
+	font-family : "NexaLight";
+	src         : font-url("NexaLight.otf") format('opentype');
+}
 
 @keyframes loadanimation-side{
 	
-	from {
-		top: 400px;
-	}
 
+	from {
+		top : 400px;
+	}
 	to {
-		top: 70px;
-		animation-timing-function: ease-out;
+		top                       : 70px;
+		animation-timing-function : ease-out;
 	}
 }
 
 @keyframes loadanimation-main{
 	
-	from {
-		top: 500px;
-	}
 
+	from {
+		top : 500px;
+	}
 	to {
-		top: 0px;
-		animation-timing-function: ease-out;
+		top                       : 0px;
+		animation-timing-function : ease-out;
 	}
 }
 
-
- @import "bootstrap-sprockets";
- @import "bootstrap";
-
-
 p, div, h1, h2, h3, h4, h5, h6 {
-	font-family: "NexaLight";
+	font-family : "NexaLight";
 }
 
 #danger{
-	color: darkred;
-	border-color: darkred;
+	color        : darkred;
+	border-color : darkred;
 }
 
 #danger:hover{
-	color: red;
+	color : red;
 	
 }
 
 .top-right-link {
-	position: absolute;
-	right: 0;
-	top: 50;
-	padding-top: 15px;
+	position    : absolute;
+	top         : 50;
+	right       : 0;
+
+	padding-top : 15px;
 }
 
 .sidebar-followers{
-	border-top-style: solid;
-	border-top-width: 1px;
-	border-top-color: lightgrey;
-	padding-top: 15px;
-	max-height: 40vh;
-	overflow: scroll;
+	overflow         : scroll;
+	max-height       : 40vh;
+	padding-top      : 15px;
+
+	border-top-color : lightgrey;
+	border-top-style : solid;
+	border-top-width : 1px;
 }
 
 .animate-load-side{
-	animation: loadanimation-side 2.5s;
+	animation : loadanimation-side 2.5s;
 }
 
 .animate-load-main{
-	animation: loadanimation-main 2.5s;
+	animation : loadanimation-main 2.5s;
 }
 
 .post-nav{
-	color: black;
-	border-color: black;
-	border-style: solid;
-	border-size: 1px;
-	font-color: black;
-}
+	color        : black;
+	border-color : black;
+	border-style : solid;
 
+	border-size  : 1px;
+	font-color   : black;
+}
 
 .home-page {
- 	background: image-url('desert.jpg');
- 	background-size: cover;
- 	background-repeat: no-repeat;
- }
-
- .home-basics {
- 	background-color:rgba(255,255,255,0.55);
- 	padding-bottom: 10vw;
- 	padding-top: 10vw;
- 	border-radius: 15px;
- }
-
- .splash-width {
- 	width: 28vw;
- }
-
- .test {
- 	width: auto;
- }
-
- body { 
- 	padding-top: 70px; 
- 	padding-left: 30px;
- 	padding-right: 30px;
- 	padding-bottom: 30px;
- 	background: #ffffff;
- }
-
-.post-body{
-	padding-top: 15px;
+	background        : image-url('desert.jpg');
+	background-repeat : no-repeat;
+	background-size   : cover;
 }
 
+.home-basics {
+	padding-top      : 10vw;
+	padding-bottom   : 10vw;
 
- .my-header {
- 	font-family: "MANIFESTO"; 	
- }
+	background-color : rgba(255,255,255,0.55);
+	border-radius    : 15px;
+}
 
- .post {
- 	border-style: solid;
- 	border-bottom-width: 1px;
- 	border-top-width: 0px;
- 	border-right-width: 0px;
- 	border-left-width: 0px;
- 	border-bottom-color: lightgrey;
- 	padding-bottom: 20px;
- }
+.splash-width {
+	width : 28vw;
+}
 
- .post-content{
-  	font-family: "NexaLight";
- 	color: black;
- }
+.test {
+	width : auto;
+}
 
- .post-content:hover, .post-content:focus{
- 	color: black;
- 	text-decoration: none;
- }
+body {
+	padding-top    : 70px;
+	padding-bottom : 30px;
+	padding-right  : 30px;
+	padding-left   : 30px;
 
- .post-header{
- 	color: black;
- 	-webkit-transition-property:color ; 
-	-webkit-transition-duration: 250ms; 
-	-webkit-transition-timing-function: linear;
- }
+	background     : #ffffff;
+}
 
- .blog-header{
- 	color: black;
- 	-webkit-transition-property:color ; 
-	-webkit-transition-duration: 250ms; 
-	-webkit-transition-timing-function: linear;
-	text-decoration: underline;
- }
+.post-body{
+	padding-top : 15px;
+}
 
- .blog-header:hover{
- 	color: darkgrey;
- }
+.my-header {
+	font-family : "MANIFESTO";
+}
 
- .post-header:hover, .post-header:focus{
- 	text-decoration: none;
- 	color: darkgrey;
- }
+.post {
+	padding-bottom      : 20px;
+
+	border-style        : solid;
+	border-top-width    : 0px;
+	border-right-width  : 0px;
+	border-bottom-color : lightgrey;
+	border-bottom-width : 1px;
+	border-left-width   : 0px;
+}
+
+.post-content{
+	font-family : "NexaLight";
+	color       : black;
+}
+
+.post-content:hover, .post-content:focus{
+	color           : black;
+	text-decoration : none;
+}
+
+.post-header{
+	color                              : black;
+
+	-webkit-transition-property        : color ;
+	-webkit-transition-duration        : 250ms;
+	-webkit-transition-timing-function : linear;
+}
+
+.blog-header{
+	color                              : black;
+	text-decoration                    : underline;
+
+	-webkit-transition-property        : color ;
+	-webkit-transition-duration        : 250ms;
+	-webkit-transition-timing-function : linear;
+}
+
+.blog-header:hover{
+	color : darkgrey;
+}
+
+.post-header:hover, .post-header:focus{
+	color           : darkgrey;
+	text-decoration : none;
+}
 
 .navbar {
-	background: white;
-	border-bottom: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: lightgrey;
+	background          : white;
+	border-bottom       : 1px;
+	border-bottom-color : lightgrey;
+	border-bottom-style : solid;
 }
 
 img {
-	max-width: 100%; 
-	height: auto;
+	height    : auto;
+	max-width : 100%;
 }
 
 .results {
-	border-style: solid;
-	border-width: 1px;
-	border-color: lightgrey;
-	border-bottom: 0px;
-	border-top: 0px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-right : 15px;
+	padding-left  : 15px;
+
+	border-color  : lightgrey;
+	border-style  : solid;
+	border-width  : 1px;
+	border-top    : 0px;
+	border-bottom : 0px;
 }
 
 .form-group{
-	width: 100%;
+	width : 100%;
 }
 
 .login-form {
-	width: 50%;
+	width : 50%;
 }
 
 .form-input {
-	border: 1px;
-	border-radius: 15px;
+	border        : 1px;
+	border-radius : 15px;
 }
 
-
 .form-control {
-	border-size: 1px;
-	border-color: #ededed;
+	border-color : #ededed;
+	border-size  : 1px;
 }
 
 .center {
-	float: none;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
+	float        : none;
+
+	margin-right : auto;
+	margin-left  : auto;
+
+	text-align   : center;
 }
 
 .post-header {
-	overflow: hidden;
+	overflow : hidden;
 }
 
 .btn-primary {
-	padding: 8px 18px;
-	background-color: white;
-	border-radius: 24px;
-	border-color: black;
-	color: black;
+	padding                            : 8px 18px;
 
-	-webkit-transition-property:color, border-color; 
-	-webkit-transition-duration: 250ms, 250ms; 
-	-webkit-transition-timing-function: linear, linear; 
+	background-color                   : white;
+	color                              : black;
+	border-color                       : black;
+	border-radius                      : 24px;
+
+	-webkit-transition-property        : color, border-color;
+	-webkit-transition-duration        : 250ms, 250ms;
+	-webkit-transition-timing-function : linear, linear;
 }
 
 .btn-primary:hover{
-	
-	color: grey;
-	border-color: grey;
+	background-color : white;
+	color            : grey;
+	border-color     : grey;
 
-	background-color: white;
+	
 }
 
 .danger-btn-custom{
-	color: #ff756a;
-	border-color: #ff756a;
+	color                              : #ff756a;
+	border-color                       : #ff756a;
 
-	-webkit-transition-property:color, border-color; 
-	-webkit-transition-duration: 250ms, 250ms; 
-	-webkit-transition-timing-function: linear, linear;
+	-webkit-transition-property        : color, border-color;
+	-webkit-transition-duration        : 250ms, 250ms;
+	-webkit-transition-timing-function : linear, linear;
 }
 
 .danger-btn-custom:hover{
-
-	color: #ff3627;
-	border-color: #ff3627;
+	color        : #ff3627;
+	border-color : #ff3627;
 }
 
 .call-to-action-btn {
-	color: #379a3c;
-	border-color: #379a3c;
+	color        : #379a3c;
+	border-color : #379a3c;
 }
 
 .call-to-action-btn:hover {
-	color: #0cad14;
-	border-color: #0cad14;
+	color        : #0cad14;
+	border-color : #0cad14;
 }
 
-
 .btn:focus, .btn:active:focus, .btn.active:focus {
-    outline: 0 none;
+	outline : 0 none;
 }
 
 .btn-default {
-	border-size: 0px;
-	border-style: solid;
-	border-color: white;
-	font-size: 20px;
-	padding-left: 0px;
+	padding-left                       : 0px;
 
+	font-size                          : 20px;
+	border-color                       : white;
+	border-style                       : solid;
 
-	-webkit-transition-property:color ; 
-	-webkit-transition-duration: 250ms; 
-	-webkit-transition-timing-function: linear;
+	-webkit-transition-property        : color ;
+	-webkit-transition-duration        : 250ms;
+	-webkit-transition-timing-function : linear;
 
+	border-size                        : 0px;
 }
 
 .btn-default:hover{
-	border-color: white;
-	background-color: white;
-	color: grey;
-
+	background-color : white;
+	color            : grey;
+	border-color     : white;
 }
 
 .avatar{
-	margin-bottom: 10px;
+	margin-bottom : 10px;
 }
 
 .comment {
-	padding-top: 10px;
+	padding-top : 10px;
 }
 
 .comment2 {
-	border-left-style: solid;
-	border-left-width: 1px;
-	border-left-color: lightgrey;
-	padding-left: 15px;
+	padding-left      : 15px;
+
+	border-left-color : lightgrey;
+	border-left-style : solid;
+	border-left-width : 1px;
 }
 
 .comment-body{
-	margin-top: 8px;
+	margin-top : 8px;
 }
 
 .comment-header {
-	color: lightgrey;
+	color : lightgrey;
 }
 
 .comment-form {
-	margin-top: 15px;
+	margin-top : 15px;
 }
 
 .edit-profile {
-	border-left-style:solid;
-	border-left-width:1px;
-	border-left-color: lightgrey;
-	margin-left: 30px;
+	margin-left       : 30px;
+
+	border-left-color : lightgrey;
+	border-left-style : solid;
+	border-left-width : 1px;
 }
 
 .blog-result-body{
-	margin-bottom: 10px;
-	color: grey;
+	margin-bottom : 10px;
+	color         : grey;
 }
 
 .header-link {
-	color: black;
-	-webkit-transition-property:color, text-decoration ; 
-	-webkit-transition-duration: 250ms, 250ms; 
-	-webkit-transition-timing-function: linear, linear;
+	color                              : black;
+
+	-webkit-transition-property        : color, text-decoration ;
+	-webkit-transition-duration        : 250ms, 250ms;
+	-webkit-transition-timing-function : linear, linear;
 }
 
 .header-link:hover{
-	color: grey;
-	text-decoration: none;
+	color           : grey;
+	text-decoration : none;
 }
 
 .search-link{
-	color: black;
-	font-size: 20px;
-	-webkit-transition-property:color, text-decoration ; 
-	-webkit-transition-duration: 250ms, 250ms; 
-	-webkit-transition-timing-function: linear, linear;
+	font-size                          : 20px;
+	color                              : black;
+
+	-webkit-transition-property        : color, text-decoration ;
+	-webkit-transition-duration        : 250ms, 250ms;
+	-webkit-transition-timing-function : linear, linear;
 }
 
 .search-link:hover{
-	color: grey;
-	text-decoration: none;
+	color           : grey;
+	text-decoration : none;
 }
 
 .post-result-body{
-	max-height: 100px;
-	overflow:hidden;
-	color: grey;
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
-	border-bottom-color: #ededed;
-	margin-bottom: 10px;
+	overflow            : hidden;
+	max-height          : 100px;
+	margin-bottom       : 10px;
+
+	color               : grey;
+	border-bottom-color : #ededed;
+	border-bottom-style : solid;
+	border-bottom-width : 1px;
+
 	-webkit-transition: max-height 1s; /* Safari */
-    transition: max-height 1s;
+	transition          : max-height 1s;
 
 	.fadeout {
-		position:absolute;
-	    z-index:200;
-	    right:0; bottom:0; left:0;
+		position                : absolute;
+		z-index                 : 200;
+
+		background              : -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%);
+		background              : -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(80%,rgba(255,255,255,1)));
+		background              : -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+		background              : -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+		background              : -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+		background              : linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+
+		right:0; bottom:0; left : 0;
 	    height:25px; /* adjust it to your needs */
-	    background: url(data:image/svg+xml;base64,alotofcodehere);
-	    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%);
-	    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(80%,rgba(255,255,255,1)));
-	    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
-	    background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
-	    background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
-	    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+		background 				: url(data:image/svg+xml;base64,alotofcodehere);
 	}
 }
 
 .post-result-body:hover{
-	max-height:150px;
+	max-height : 150px;
 }
 
 .post-content-limiter{
-	max-height: 60vh;
-	overflow:hidden;
-	-webkit-transition: max-height 2s;
+	overflow           : hidden;
+	max-height         : 60vh;
+
+	-webkit-transition : max-height 2s;
 
 	.fadeout {
-		position:absolute;
-	    z-index:200;
-	    right:0; bottom:0; left:0;
+		position                : absolute;
+		z-index                 : 200;
+
+		background              : -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%);
+		background              : -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(80%,rgba(255,255,255,1)));
+		background              : -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+		background              : -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+		background              : -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+		background              : linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+
+		right:0; bottom:0; left : 0;
 	    height:25px; /* adjust it to your needs */
-	    background: url(data:image/svg+xml;base64,alotofcodehere);
-	    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%);
-	    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(80%,rgba(255,255,255,1)));
-	    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
-	    background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
-	    background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
-	    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+		background 				: url(data:image/svg+xml;base64,alotofcodehere);
 	}
 }
 
 .post-content-limiter:hover{
-	max-height: 1750px;
+	max-height : 1750px;
 }
 
 .activity-limit {
-	max-height: 15vh;
-	overflow: hidden;
+	overflow   : hidden;
+	max-height : 15vh;
 
 	.fadeout {
-		position:absolute;
-	    z-index:200;
-	    right:0; bottom:0; left:0;
+		position                : absolute;
+		z-index                 : 200;
+
+		background              : -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%);
+		background              : -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(80%,rgba(255,255,255,1)));
+		background              : -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+		background              : -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+		background              : -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+		background              : linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+
+		right:0; bottom:0; left : 0;
 	    height:25px; /* adjust it to your needs */
-	    background: url(data:image/svg+xml;base64,alotofcodehere);
-	    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%);
-	    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(80%,rgba(255,255,255,1)));
-	    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
-	    background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
-	    background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
-	    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+		background 				:url(data:image/svg+xml;base64,alotofcodehere);
 	}
 }
 
 .activity-size {
-	font-size: 10pt;
+	font-size : 10pt;
 }
 
 .activity-stream {
-	max-height: 75vh;
-
-	padding-left:15px;
-	overflow: scroll;
+	overflow     : scroll;
+	max-height   : 75vh;
+	padding-left : 15px;
 }
 
 .blog-stream {
-	max-height: 75vh;
-	overflow: scroll;
+	overflow   : scroll;
+	max-height : 75vh;
 }
-
 
 .img-discover{
-	height: 40px;
+	height : 40px;
 }
 
-
 .blog-result-body {
-	padding-top: 20px;
-	padding-bottom: 40px;
+	padding-top    : 20px;
+	padding-bottom : 40px;
 }
 
 .border-bottom {
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
-	border-bottom-color: lightgrey;
+	border-bottom-color : lightgrey;
+	border-bottom-style : solid;
+	border-bottom-width : 1px;
 }
 
-
 .result-container{
-	max-height: 300px;
-	overflow: scroll;
+	overflow   : scroll;
+	max-height : 300px;
 }
 
 .blog-description{
-	padding-left: 20px;
-	font-size: 10pt;
+	padding-left : 20px;
+	font-size    : 10pt;
 }
 
 .blog-border {
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #f6f6f6;
-	padding-bottom: 10px;
+	padding-bottom      : 10px;
+
+	border-bottom-color : #f6f6f6;
+	border-bottom-style : solid;
+	border-bottom-width : 1px;
 }
 
 .grey-font {
-	color: #bebebe;
-	font-size: 10pt;
-	padding-left: 10px;
+	padding-left : 10px;
+
+	font-size    : 10pt;
+	color        : #bebebe;
 }
 
 .just-grey-font{
-	color: #bebebe;
+	color : #bebebe;
 }
 
 .just-grey-font:hover{
-	color: #bebebe;
+	color : #bebebe;
 }
 
 .left-border{
-	border-left-style: solid;
-	border-left-width: 1px;
-	border-left-color: lightgrey;
+	border-left-color : lightgrey;
+	border-left-style : solid;
+	border-left-width : 1px;
 }
 
-IDS
-
 #newblog-header {
-	padding-bottom: 20px;
-	padding-left: 100px;
+	padding-bottom : 20px;
+	padding-left   : 100px;
 }
 
 #post-date {
-	text-align: right;
+	text-align : right;
 }
 
 #mypost-header {
-	text-align: left;
+	text-align : left;
 }
 
 #sneak-post {
-	max-height: 150px;
-	postition: absolute;
-	text-align: left;
-	font-size: 10pt;
-	color: grey;
-	width: auto;
-	overflow: hidden;
-	-webkit-transition: max-height 1s; /* Safari */
-    transition: max-height 1s;
+	overflow   : hidden;
+	max-height : 150px;
+	width      : auto;
 
-    .fadeout {
-		position:absolute;
-	    z-index:200;
-	    right:0; bottom:0; left:0;
+	font-size  : 10pt;
+	color      : grey;
+	text-align : left;
+
+	-webkit-transition: max-height 1s; /* Safari */
+	transition : max-height 1s;
+
+	postition  : absolute;
+
+	.fadeout {
+		position                : absolute;
+		z-index                 : 200;
+
+		background              : -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%);
+		background              : -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(80%,rgba(255,255,255,1)));
+		background              : -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+		background              : -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+		background              : -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+		background              : linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+
+		right:0; bottom:0; left : 0;
 	    height:50px; /* adjust it to your needs */
-	    background: url(data:image/svg+xml;base64,alotofcodehere);
-	    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%);
-	    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(80%,rgba(255,255,255,1)));
-	    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
-	    background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
-	    background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
-	    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+		background 				:url(data:image/svg+xml;base64,alotofcodehere);
 	}
 }
 
 #sneak-post:hover{
-	max-height: 500px;
+	max-height : 500px;
 }
 
 #sidebar{
-	border-right-style: solid;
-	border-right-width: 1px;
-	border-color: lightgrey;
-	text-align: center;
-	position: fixed;
-	padding-left: 0px;
-	word-wrap: break-word;
-	overflow: scroll;
-	margin-right: 15px;
+	position           : fixed;
+
+	overflow           : scroll;
+	margin-right       : 15px;
+	padding-left       : 0px;
+
+	text-align         : center;
+	word-wrap          : break-word;
+	border-color       : lightgrey;
+	border-right-style : solid;
+	border-right-width : 1px;
 }
 
 #in-post-sidebar{
-	text-align: center;
-	word-wrap: break-word;
-	padding-top: 15px;
-	padding-left: 15px;
+	padding-top  : 15px;
+	padding-left : 15px;
 
+	text-align   : center;
+	word-wrap    : break-word;
 }
-
-
 
 .background-test{
 	background: -webkit-linear-gradient(left, #e9e9e9 , white); /* For Safari 5.1 to 6.0 */
@@ -588,90 +606,91 @@ IDS
 }
 
 #comment-head {
-	font-color: grey;
+	font-color : grey;
 }
 
 #post-delete {
-	color: darkred;
-	border-style: solid;
-	border-width: 0px;
-	background-color: white;
-	font-size: 16px;
+	background-color                   : white;
+	font-size                          : 16px;
+	color                              : darkred;
+	border-style                       : solid;
+	border-width                       : 0px;
 
-	-webkit-transition-property:color, font-size ; 
-	-webkit-transition-duration: 250ms, 250ms; 
-	-webkit-transition-timing-function: linear, linear;
+	-webkit-transition-property        : color, font-size ;
+	-webkit-transition-duration        : 250ms, 250ms;
+	-webkit-transition-timing-function : linear, linear;
 }
 
 #post-delete:hover {
-	color: red;
+	color : red;
 }
 
 #comment-count{
-	font-size: 18px;
+	font-size : 18px;
 }
 
 #mypost-header {
-	font-size: 17vmin;
-	margin-bottom: -20px;
-	padding-bottom: 0px;
-	border-width: 0px;
-	border-bottom-width: 1px;
-	border-bottom-color: lightgrey;
+	margin-bottom       : -20px;
+	padding-bottom      : 0px;
+
+	font-size           : 17vmin;
+	border-width        : 0px;
+	border-bottom-color : lightgrey;
+	border-bottom-width : 1px;
 }
 
 #post-back{
-	margin-top: 10px;
-	font-size: 14px;
+	margin-top : 10px;
+	font-size  : 14px;
 }
 
 #log-in-links{
-	padding-right: 27px;
+	padding-right : 27px;
 }
 
 #log-in-header{
-	padding-right: 27px;
+	padding-right : 27px;
 }
 
 #splash-button{
-	background-color: transparent;
+	background-color                   : transparent;
 
-	-webkit-transition-property:color, border-color, background-color ; 
-	-webkit-transition-duration: 250ms, 250ms, 250ms; 
-	-webkit-transition-timing-function: linear, linear, linear;
+	-webkit-transition-property        : color, border-color, background-color ;
+	-webkit-transition-duration        : 250ms, 250ms, 250ms;
+	-webkit-transition-timing-function : linear, linear, linear;
 }
 
 #splash-button:hover{
-	color: white;
-	border-color: white;
+	color        : white;
+	border-color : white;
 }
 
 #post-back{
-	padding-left: 15px;
+	padding-left : 15px;
 }
 
 #post-nav{
-	font-size: 60px;
+	font-size : 60px;
 }
 
 #results-header{
-	padding-bottom: 15px;
+	padding-bottom : 15px;
 }
 
 #name-entry{
-	width: 33%;
+	width : 33%;
 }
 
 #discover-post-header{
-	font-size: 25px;
+	font-size : 25px;
 }
 
 #discover-header{
-	font-size: 65px;
-	font-family: "MANIFESTO";
+	font-family : "MANIFESTO";
+	font-size   : 65px;
 }
 
 #fix-this{
-	padding-top: 8px;
-	padding-right: 5px;
+	padding-top   : 8px;
+	padding-right : 5px;
 }

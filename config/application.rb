@@ -21,6 +21,7 @@ module Blogme
     config.assets.paths << Rails.root.join("assets", "fonts")
 
     #config.paperclip_defaults = {:storage => :fog, :fog_credentials => {:provider => "Local", :local_root => "#{Rails.root}/public"}, :fog_directory => "", :fog_host => "localhost"}
-
+    config.action_view.embed_authenticity_token_in_remote_forms = true
+    
   end
 end

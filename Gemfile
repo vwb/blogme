@@ -38,6 +38,10 @@ gem 'spring',        group: :development
 
 ## Added Gems ##
 
+gem 'jquery-turbolinks'
+
+gem 'will_paginate-bootstrap'
+
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 

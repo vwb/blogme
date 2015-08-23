@@ -28,6 +28,12 @@ class PostsController < ApplicationController
 
 	def destroy
 		@post = Post.find(params[:id])
+		@comment = @post.comments
+
+		@comment.each do |i| 
+			i.destroy
+		end
+		
 		blog = @post.blog_id
 		if @post.destroy
 			respond_to do |format|

@@ -21,9 +21,9 @@
 			<% end %>
 			</div>
 			<br>
+			<% if !@blogs.empty? %>
 			<h3 class= "center"> Blogs <small> with "<%= @params%>" </small></h3>
 			<div class="result-container">
-			<% if !@blogs.empty? %>
 					<% @blogs.each do |blog| %>
 						<div>
 							<%= render "blogs/blog2", :blog => blog %>

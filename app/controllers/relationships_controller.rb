@@ -5,13 +5,19 @@
 		@blog = Blog.find(params[:followed_id])
 		current_user.follow(@blog)
 		UserMailer.follow_notification(@blog.user, current_user, @blog).deliver
-		redirect_to @blog
+		respond_to do |format|
+      		format.html { redirect_to @blog }
+      		format.js
+      	end
 	end
 
 	def destroy
-		blog = Relationship.find(params[:id]).followed
-		current_user.unfollow(blog)
-		redirect_to blog
+		@blog = Relationship.find(params[:id]).followed
+		current_user.unfollow(@blog)
+		respond_to do |format|
+      		format.html { redirect_to @blog }
+      		format.js
+      	end
 	end
 
 
